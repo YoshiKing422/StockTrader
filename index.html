@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="icon" type="image/x-icon" href="image.ico">
+</head>
+<body>
+
+<div class="container">
+    <h1>Stock Market Tracker</h1>
+
+    <div class="search-box">
+        <input type="text" id="symbolInput" placeholder="Enter stock ticker (AAPL, TSLA, AMZN)" autocomplete="off">
+        <button onclick="searchStock()">Search</button>
+        <div id="suggestions" class="suggestions" aria-hidden="true"></div>
+    </div>
+
+    <div id="result" class="result hidden">
+        <h2 id="companyName"></h2>
+        <p id="symbol"></p>
+
+        <div class="price">
+            <span id="price"></span>
+            <span id="change"></span>
+        </div>
+
+        <div class="details">
+            <p><strong>Open:</strong> <span id="open"></span></p>
+            <p><strong>High:</strong> <span id="high"></span></p>
+            <p><strong>Low:</strong> <span id="low"></span></p>
+            <p><strong>Previous Close:</strong> <span id="prevClose"></span></p>
+            <p><strong>Last Updated:</strong> <span id="time"></span></p>
+        </div>
+
+        <canvas id="stockChart" height="200"></canvas>
+    </div>
+
+    <p id="error" class="error"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
